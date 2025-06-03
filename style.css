@@ -1,14 +1,19 @@
 /* General Body Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: #fff;
 }
 
-/* Notification Bar */
+/* Notification Bar - Glassy */
 .notification {
-  background-color: #007bff;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   color: white;
   padding: 15px;
   text-align: center;
@@ -17,7 +22,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .notification span {
@@ -25,8 +31,8 @@ body {
   font-size: 14px;
   font-weight: normal;
   margin-top: 5px;
+  color: #e0e0e0;
 }
-
 /* Container for Cards */
 #menu-container {
   display: flex;
@@ -38,33 +44,35 @@ body {
 
 /* Card Styles */
 .card {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 250px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 18px;
+  width: 220px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-  border: 2px solid transparent;
 }
 
 /* Smooth Blue Hover Effect */
 .card:hover {
-  transform: translateY(-5px);
-  border-color: #007bff;
-  box-shadow: 0 6px 25px rgba(0, 123, 255, 0.2);
+  transform: translateY(-6px);
+  border-color: #00bfff;
+  box-shadow: 0 10px 25px rgba(0, 191, 255, 0.4);
 }
 
 /* English Title */
 .card h3 {
   margin-top: 0;
   font-size: 18px;
-  color: #333;
+  color: #fff;
 }
 
 /* Arabic Name */
 .card .arabic {
   font-size: 16px;
-  color: #666;
+  color: #e0e0e0;
   margin-bottom: 10px;
 }
 
@@ -78,9 +86,10 @@ body {
 .services li {
   margin: 5px 0;
   font-size: 15px;
+  color: #f5f5f5;
 }
 
-/* Fancy Footer Box */
+/* Fancy Footer */
 .fancy-footer {
   position: fixed;
   bottom: 20px;
@@ -136,5 +145,10 @@ body {
   .card .arabic,
   .services li {
     font-size: 14px;
+  }
+
+  .fancy-footer {
+    font-size: 0.85rem;
+    padding: 8px 16px;
   }
 }
